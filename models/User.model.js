@@ -8,6 +8,9 @@ const userSchema = new Schema(
       required: false,
       unique: true,
       trim: true,
+      favoriteRecipes: [],
+      ImageUrl: String,
+    
     },
     email: {
       type: String,
@@ -20,6 +23,11 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+   bio:{
+    type: String,
+    required: false,
+    unique: false,
+    },
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
@@ -30,3 +38,5 @@ const userSchema = new Schema(
 const User = model("User", userSchema);
 
 module.exports = User;
+
+bananas
