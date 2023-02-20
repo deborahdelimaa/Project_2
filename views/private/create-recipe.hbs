@@ -1,4 +1,4 @@
-<h1>Create recipe</h1>
+{{!-- <h1>Create recipe</h1>
 
 <form action="/create-recipe" method="post" enctype="multipart/form-data">
   <label for="name">Recipe name:</label>
@@ -19,3 +19,44 @@
   <button type="submit">Create recipe</button>
 
 </form>
+
+
+ --}}
+ <link rel="stylesheet" href="/stylesheets/create.css" />
+
+<div class="center">
+
+<form action="/create-recipe" method="POST" enctype="multipart/form-data">
+<div class="container">
+        <div class="card">
+            <a class="singup"> Create a recipe:</a>
+            <div class="inputBox1">
+                <input type="text" name="name">
+                <span class="user">Name:</span>
+            </div>
+
+
+            <div class="inputBox">
+                <input type="text" name="duration">
+                <span>Duration:</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="text"  name="ingredients">
+                <span>Ingredients</span>
+            </div>
+            <div class="inputBox">
+                <input type="text"  name="preparation">
+                <span>Preparation:</span>
+            </div>
+            <div class="inputBox">
+                <input type="file"  name="image">
+                <span>Choose a file</span>
+            </div>
+
+            <button class="enter">Create Recipe</button>
+
+        </div>
+    </div>
+    </div>
+    </form>
