@@ -12,7 +12,7 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default:"https://static.wikia.nocookie.net/disney/images/a/ab/Remy2.jpg/revision/latest/scale-to-width-down/258?cb=20150811202513&path-prefix=pt-br",
+      default:"https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-20810-f3qxzs_4923c203.jpeg",
     },
     email: {
       type: String,
