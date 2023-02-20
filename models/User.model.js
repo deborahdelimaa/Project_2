@@ -8,7 +8,7 @@ const userSchema = new Schema(
       required: false,
       unique: true,
       trim: true,
-      favoriteRecipes: []
+      favoriteRecipes: [{ type: Schema.Types.ObjectId, ref: "Recipe"}]
     },
     image: {
       type: String,
