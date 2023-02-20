@@ -141,6 +141,12 @@ router.post("/login",  (req, res, next) => {
     .catch((err) => next(err));
 });
 
+router.get("/planner", (req, res) => res.render("private/planner"));
+
+
+
+
+
 // GET /auth/logout
 router.get("/logout",(req, res) => {
   req.session.destroy((err) => {

@@ -1,4 +1,4 @@
-<div id="form">
+{{!-- <div id="form">
   <h2>Sign Up</h2>
   <form action="/auth/signup" method="POST">
 
@@ -21,4 +21,36 @@
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
-</div>
+</div> --}}
+   <link rel="stylesheet" href="/stylesheets/style.css" />
+
+<div class="center">
+
+<form action="/auth/signup" method="POST">
+<div class="container">
+        <div class="card">
+            <a class="singup">Sign Up</a>
+            <div class="inputBox1">
+                <input type="text" required="required" name="email">
+                <span class="user">Email</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" required="required" name="username">
+                <span>Username</span>
+            </div>
+
+            <div class="inputBox">
+                <input type="password" required="required" name="password">
+                <span>Password</span>
+            </div>
+            <button type="submit" class="enter" >SignUp</button>
+
+        </div>
+    </div>
+   
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+     </form>
+    </div>
