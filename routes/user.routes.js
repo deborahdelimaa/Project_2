@@ -4,10 +4,10 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const User = require("../models/User.model");
 
-const isLoggedOut = require("../middleware/isLoggedOut");
-const isLoggedIn = require("../middleware/isLoggedIn");
+/* const isLoggedOut = require("../middleware/isLoggedOut");
+const isLoggedIn = require("../middleware/isLoggedIn"); */
 
-router.get("/profile", isLoggedOut, (req, res) => {
+router.get("/profile", async (req, res) => {
     res.render("private/profile");
   });
 
