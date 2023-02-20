@@ -8,9 +8,11 @@ const userSchema = new Schema(
       required: false,
       unique: true,
       trim: true,
-      favoriteRecipes: [],
-      ImageUrl: String,
-    
+      favoriteRecipes: []
+    },
+    image: {
+      type: String,
+      default:"https://static.wikia.nocookie.net/disney/images/a/ab/Remy2.jpg/revision/latest/scale-to-width-down/258?cb=20150811202513&path-prefix=pt-br",
     },
     email: {
       type: String,

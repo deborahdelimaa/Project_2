@@ -16,8 +16,11 @@ const recipeSchema = new Schema(
       preparation:{
       type: String,
       },
+      image:{
+        type: String,
+        default:"https://www.gffoodservice.com.au/content/uploads/2019/08/culinary_terms-hero-1-@2x-1.jpg"
+      }
     },{
-        // this second object adds extra properties: `createdAt` and `updatedAt`
         timestamps: true,
       }
     );
