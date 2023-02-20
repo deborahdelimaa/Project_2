@@ -30,6 +30,7 @@ const userSchema = new Schema(
     required: false,
     unique: false,
     },
+    
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

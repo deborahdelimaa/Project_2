@@ -87,10 +87,10 @@ router.get("/login", (req, res) => {
 
 // POST /auth/login
 router.post("/login",  (req, res, next) => {
-  const { username, email, password } = req.body;
+  const { email, password } = req.body;
 
   // Check that username, email, and password are provided
-  if (username === "" || email === "" || password === "") {
+  if (email === "" || password === "") {
     res.status(400).render("auth/login", {
       errorMessage:
         "All fields are mandatory. Please provide username, email and password.",
@@ -134,7 +134,7 @@ router.post("/login",  (req, res, next) => {
           // Remove the password field
           delete req.session.currentUser.password;
 
-          res.redirect("private/porfile");
+          res.redirect("/profile");
         })
         .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
     })
