@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(255, 241, 189);
+}
+
+.flexdiv{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: baseline;
+	align-content: flex-start;
+}
