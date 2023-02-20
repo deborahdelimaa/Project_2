@@ -1,1 +1,21 @@
-<h1>create recipe</h1>
+<h1>Create recipe</h1>
+
+<form action="/create-recipe" method="post" enctype="multipart/form-data">
+  <label for="name">Recipe name:</label>
+  <input type="text" name="name" id="name" />
+
+  <label for="duration">Duration:</label>
+  <input type="text" name="duration" id="duration" />
+
+  <label for="ingredients">Ingredients</label>
+  <input type="text" name="ingredients" id="ingredients" />
+
+  <label for="preparation">Preparation</label>
+  <textarea name="preparation" id="preparation" cols="30" rows="10"></textarea>
+
+  <label for="image">Select an image for your recipe!</label>
+  <input type="file" name="image" id="image" />
+
+  <button type="submit">Create recipe</button>
+
+</form>

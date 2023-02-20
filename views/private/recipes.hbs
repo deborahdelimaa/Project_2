@@ -1,1 +1,15 @@
 <h1>Recipes</h1>
+
+{{#each recipes}}
+<div class="card" style="width: 18rem;">
+  <img src="{{image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">{{duration}}</p>
+  </div>
+  <div class="card-body">
+    <a href="#" class="card-link">See more</a>
+    <a href="#" class="card-link">Add to the favorites</a>
+  </div>
+</div>
+{{/each}}

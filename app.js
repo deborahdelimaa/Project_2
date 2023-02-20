@@ -30,8 +30,8 @@ app.use("/", indexRoutes);
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 
-  const recipeRoutes = require("./routes/recipe.routes");
-app.use("/", recipeRoutes); 
+const recipeRoutes = require("./routes/recipe.routes");
+app.use("/", recipeRoutes);
 
 const userRoutes = require("./routes/user.routes");
 app.use("/", userRoutes);
