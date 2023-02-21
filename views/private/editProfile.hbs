@@ -2,10 +2,14 @@
 
 <form action="/edit-profile/{{user._id}}" method="post" enctype="multipart/form-data">
   <label for="username">Username:</label>
-  <input type="text" name="username" id="username" />
+  <input type="text" name="username" id="username" value='{{username}}'/>
 
   <label for="password">Password:</label>
   <input type="password" name="password" id="password" />
+
+  <label for="bio">Bio:</label>
+  <textarea class='form-control' name='bio' id='bio' cols='30' rows='10'>{{bio}}
+        </textarea>
 
   <label for="image">Select an image for your profile!</label>
   <input type="file" name="image" id="image" />
