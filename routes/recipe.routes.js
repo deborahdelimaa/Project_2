@@ -65,7 +65,6 @@ router.get('/recipe-details/:id', async (req, res) => {
 
 
 
-  router.get("/planner", (req, res)=> res.render("private/planner"))
 
 
 module.exports = router;
