@@ -5,7 +5,7 @@ const fileUploader = require("../config/cloudinary.config");
 
 // Display all the recipes
 
-router.get("/recipes", async (req, res) => {
+router.get("/recipes", async (req, res, next) => {
   try {
     const recipes = await Recipe.find();
     res.render("private/recipes", { recipes });

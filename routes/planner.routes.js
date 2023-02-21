@@ -7,8 +7,16 @@ const fileUploader = require("../config/cloudinary.config");
  
  
  
- router.get("/planner", (req, res)=> res.render("private/planner"))
+ router.get("/planner", (req, res)=> res.render("private/planner"));
 
- 
 
+ router.post("/planner", async (req, res, next) => {
+    try {
+      const {monday, tuesday, wednesday, thursday, friday, saturday, sunday} = req.body
+      
+    } catch (error) {
+      console.log(error);
+      next(error);
+    }
+  });
  module.exports = router;

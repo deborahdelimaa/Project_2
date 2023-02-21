@@ -1,8 +1,8 @@
-body{
+/* body{
     background-image: url("https://thumbs.dreamstime.com/b/greek-food-background-traditional-different-dishes-top-view-close-up-153149838.jpg");
   }
   
-
+ */
 .card {
     width: 100%;
     margin: auto
@@ -104,6 +104,14 @@ body{
 	align-content: stretch;
     margin-left: 10vw;
 }
+
+.card-body2{
+    margin-top: 25vh;
+}
+
+
+
+
 @media only screen and (max-width: 600px) {
     .card {
         font-size: 11px

@@ -13,7 +13,22 @@
   </div>
   <div class="card-body">
     <a href="/recipe-details/{{_id}}" class="card-link">See more</a>
-    <a href="#" class="card-link">Add to the favorites</a>
+    <div class="dropdown">
+	  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+		Add to callendar
+	  </button>
+    <form action="/planner" method="post">
+	  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+		<li><a class="dropdown-item" value="monday" name="monday" href="#">Monday</a></li>
+		<li><a class="dropdown-item" value="tuesday" name="tuesday" href="#">Tuesday</a></li>
+		<li><a class="dropdown-item" value="wednesday" name="wednesday" href="#">Wednesday</a></li>
+    <li><a class="dropdown-item" value="tuesday" name="tuesday" href="#">Thursday</a></li>
+    <li><a class="dropdown-item" value="friday" name="friday" href="#">Friday</a></li>
+    <li><a class="dropdown-item" value="saturday" name="saturday" href="#">Saturday</a></li>
+    <li><a class="dropdown-item" value="sunday" name="sunday" href="#">Sunday</a></li>
+	  </ul>
+    </form>
+	</div>
   </div>
 </div>
 {{/each}}
