@@ -4,74 +4,88 @@
 <table>
   <thead>
     <tr>
-      <td></td>
-      <td> Monday</td>
-      <td>Tuesday</td>
-      <td>Wednesday</td>
-      <td>Thursday</td>
-      <td>Friday</td>
-      <td>Saturday</td>
-      <td>Sunday</td>
+      <td style="background-color:rgb(255, 241, 189);"></td>
+      <td class="td1"> Monday</td>
+      <td class="td1">Tuesday</td>
+      <td class="td1">Wednesday</td>
+      <td class="td1">Thursday</td>
+      <td class="td1">Friday</td>
+      <td class="td1">Saturday</td>
+      <td class="td1">Sunday</td>
     </tr>
   </thead>
   <tr>
-    <td></td>
-    <td>{{calendar.monday.0.name}}</td>
-    <td>{{calendar.tuesday.0.name}}</td>
-    <td>{{calendar.wednesday.0.name}}</td>
-    <td>{{calendar.thursday.0.name}}</td>
-    <td>{{calendar.friday.0.name}}</td>
-    <td>{{calendar.saturday.0.name}}</td>
-    <td>{{calendar.sunday.0.name}}</td>
+    <td style="background-color:rgb(255, 241, 189);"></td>
+    <td class="td2">{{calendar.monday.0.name}}
+      <form action="/planner/{{_id}}" method="post">
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.tuesday.0.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.wednesday.0.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.thursday.0.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.friday.0.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.saturday.0.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.sunday.0.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
   </tr>
   <tr>
-    <td></td>
-    <td>{{calendar.monday.1.name}}</td>
-    <td>{{calendar.tuesday.1.name}}</td>
-    <td>{{calendar.wednesday.1.name}}</td>
-    <td>{{calendar.thursday.1.name}}</td>
-    <td>{{calendar.friday.1.name}}</td>
-    <td>{{calendar.saturday.1.name}}</td>
-    <td>{{calendar.sunday.1.name}}</td>
+    <td style="background-color:rgb(255, 241, 189);"></td>
+    <td class="td2">{{calendar.monday.1.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.tuesday.1.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.wednesday.1.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.thursday.1.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.friday.1.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.saturday.1.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.sunday.1.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
   </tr>
   <tr>
-    <td></td>
-    <td>{{calendar.monday.2.name}}</td>
-    <td>{{calendar.tuesday.2.name}}</td>
-    <td>{{calendar.wednesday.2.name}}</td>
-    <td>{{calendar.thursday.2.name}}</td>
-    <td>{{calendar.friday.2.name}}</td>
-    <td>{{calendar.saturday.2.name}}</td>
-    <td>{{calendar.sunday.2.name}}</td>
+    <td style="background-color:rgb(255, 241, 189);"></td>
+    <td class="td2">{{calendar.monday.2.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.tuesday.2.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.wednesday.2.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.thursday.2.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.friday.2.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.saturday.2.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
+    <td class="td2">{{calendar.sunday.2.name}}<form action="/planner/{{_id}}" method="post">
+    <button type="submit">X</button>
+</form></td>
   </tr>
 
 </table>
-
-{{! <!--For Page-->
-<div class="page">
-    <!--Card-->
-    <div class="card">
-        <!--Card Header-->
-        <div class="card-header">
-            <p> <i class="fa fa-bars"></i> <i class="fa fa-calendar ml-4" aria-hidden="true"></i> <i class="fa fa-star ml-4" aria-hidden="true"></i> <span class="float-right"> <span class="mr-4 navTask">My Planner</span> <i class="fa fa-search" aria-hidden="true"></i> </span> </p>
-        </div>
-        <!--Card Body-->
-        <div class="card-body">
-            <p class="heading1"> <span class="today">Monday</span> 
-            <p class="heading2"><span class="tomorrow">Tuesday</span> <span class="float-right headingright"></span></p>
-            <p class="heading2"><span class="tomorrow">Wednesday</span> <span class="float-right headingright"></span></p>
-            <p class="heading2"><span class="tomorrow">Tuesday</span> <span class="float-right headingright"></span></p>
-            <p class="heading2"><span class="tomorrow">Thursday</span> <span class="float-right headingright"></span></p>
-            <p class="heading2"><span class="tomorrow">Friday</span> <span class="float-right headingright"></span></p>
-            <p class="heading2"><span class="tomorrow">Saturday</span> <span class="float-right headingright"></span></p>
-            <p class="heading2"><span class="tomorrow">Sunday</span> <span class="float-right headingright"></span></p>
-            
-            <p class="task2 mt-4"><i class="fa fa-calendar mr-2" aria-hidden="true"></i> </p>
-        </div>
-
-        <div>
-            <p class="heading1"> <span class="today">Lunch</span>
-            <p class="heading1 card-body2"> <span class="today">Dinner</span>
-        </div>
-    </div>
-</div> }}
