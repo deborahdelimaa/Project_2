@@ -3,6 +3,8 @@
 body {
   background-color: rgb(255, 241, 189);
   font-family: 'Rajdhani', sans-serif;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 h1{
@@ -24,14 +26,12 @@ td {
 }
 
 table {
-  width: 90%;
-  height: 60%;
-  margin-left: 5vw;
+  width: 95vw;
+  height: 60vh;
+  margin-left: 2.5vw;
   margin-top: 7vh;
   position:static;
-  max-width: 90%;
-  max-height: 60%;
- 
+  
 }
 
 .td1{
@@ -41,14 +41,17 @@ table {
     border-radius: 10px;
     border-bottom: 4px solid rgb(255, 241, 189);
     border-right:4px solid rgb(255, 241, 189); 
-
 }
+
 .td2{
     
    color: rgb(255, 241, 189); 
     border-bottom: 4px solid rgb(255, 241, 189);
     border-right: 4px solid rgb(255, 241, 189);
     border-radius: 10px;
+    max-width: 200px;
+    max-height: auto;
+    
     
 }
 
