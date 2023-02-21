@@ -27,15 +27,12 @@ router.get("/edit-profile", async (req, res, next) => {
 });
 
 
-router.post(
-  "/edit-profile",
-  fileUploader.single("image"),
-  async (req, res, next) => {
+router.post("/edit-profile", fileUploader.single("image"), async (req, res, next) => {
     try {
       const { username, email, password, bio } = req.body;
 
       if (req.file) {
-        await User.findByIdAndUpdate({
+        await User.findOneAndUpdate({
           username,
           email,
           password,

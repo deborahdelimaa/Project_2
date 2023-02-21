@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const Calendar = require("./Calendar.model");
 
 // TODO: Please make sure you edit the User model to whatever makes sense in this case
 const userSchema = new Schema(
@@ -8,7 +9,7 @@ const userSchema = new Schema(
       required: false,
       unique: true,
       trim: true,
-      favoriteRecipes: [{ type: Schema.Types.ObjectId, ref: "Recipe"}]
+      
     },
     image: {
       type: String,
@@ -30,7 +31,12 @@ const userSchema = new Schema(
     required: false,
     unique: false,
     },
+    calendar: {
+      type: Schema.Types.ObjectId, ref: "Calendar"
+    },
     
+    favoriteRecipes:
+    [{ type: Schema.Types.ObjectId, ref: "Recipe"}]
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
