@@ -2,7 +2,8 @@ const express = require("express");
 const Recipe = require("../models/Recipe.model");
 const router = express.Router();
 const fileUploader = require("../config/cloudinary.config");
-
+const isLoggedOut = require("../middleware/isLoggedOut");
+const isLoggedIn = require("../middleware/isLoggedIn");
 // Display all the recipes
 
 router.get("/recipes", async (req, res, next) => {
@@ -17,7 +18,7 @@ router.get("/recipes", async (req, res, next) => {
 
 // create new recipes
 
-router.get("/create-recipe", (req, res) => res.render("private/create-recipe"));
+router.get("/create-recipe", isLoggedOut, (req, res) => res.render("private/create-recipe"));
 
 router.post(
   "/create-recipe",

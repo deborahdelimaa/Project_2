@@ -3,6 +3,7 @@ const router = express.Router();
 const fileUploader = require('../config/cloudinary.config')
 const mongoose = require("mongoose");
 const User = require("../models/User.model");
+const bcrypt = require("bcrypt");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 /* const isLoggedOut = require("../middleware/isLoggedOut");
@@ -22,6 +23,7 @@ router.get("/profile", isLoggedIn, async (req, res, next) => {
 router.get("/edit-profile/:id", async (req, res, next) => {
   const user = req.session.currentUser
   const {id} = req.params
+  
   console.log(user)
   try {
     await User.findOne({id: id})
@@ -36,6 +38,7 @@ router.post("/edit-profile/:id", fileUploader.single("image"), async (req, res, 
   
   const {id} = req.params
   const { username, email, password, bio } = req.body;
+  
     try {
 
       if (req.file) {
