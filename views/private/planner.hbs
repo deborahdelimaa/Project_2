@@ -1,31 +1,53 @@
+<link rel="stylesheet" href="/stylesheets/planner.css" />
 
-<link rel="stylesheet" href="/stylesheets/planner.css">
-
-{{!-- <h1>My Planner</h1>
+<h1>My Planner</h1>
 <table>
-    <thead>
+  <thead>
     <tr>
-        <td></td>
-        <td> Monday</td>
-        <td>Tuesday</td>
-        <td>Wednesday</td>
-        <td>Thursday</td>
-        <td>Friday</td>
-        <td>Saturday</td>
-        <td>Sunday</td>
+      <td></td>
+      <td> Monday</td>
+      <td>Tuesday</td>
+      <td>Wednesday</td>
+      <td>Thursday</td>
+      <td>Friday</td>
+      <td>Saturday</td>
+      <td>Sunday</td>
     </tr>
-    </thead>
-    <tr>
-    <td>Lunch</td>
-    </tr>
-    <tr>
-        <td>Dinner</td>
-    </tr>
+  </thead>
+  <tr>
+    <td></td>
+    <td>{{calendar.monday.0.name}}</td>
+    <td>{{calendar.tuesday.0.name}}</td>
+    <td>{{calendar.wednesday.0.name}}</td>
+    <td>{{calendar.thursday.0.name}}</td>
+    <td>{{calendar.friday.0.name}}</td>
+    <td>{{calendar.saturday.0.name}}</td>
+    <td>{{calendar.sunday.0.name}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>{{calendar.monday.1.name}}</td>
+    <td>{{calendar.tuesday.1.name}}</td>
+    <td>{{calendar.wednesday.1.name}}</td>
+    <td>{{calendar.thursday.1.name}}</td>
+    <td>{{calendar.friday.1.name}}</td>
+    <td>{{calendar.saturday.1.name}}</td>
+    <td>{{calendar.sunday.1.name}}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>{{calendar.monday.2.name}}</td>
+    <td>{{calendar.tuesday.2.name}}</td>
+    <td>{{calendar.wednesday.2.name}}</td>
+    <td>{{calendar.thursday.2.name}}</td>
+    <td>{{calendar.friday.2.name}}</td>
+    <td>{{calendar.saturday.2.name}}</td>
+    <td>{{calendar.sunday.2.name}}</td>
+  </tr>
 
 </table>
- --}}
 
-<!--For Page-->
+{{! <!--For Page-->
 <div class="page">
     <!--Card-->
     <div class="card">
@@ -46,9 +68,10 @@
             
             <p class="task2 mt-4"><i class="fa fa-calendar mr-2" aria-hidden="true"></i> </p>
         </div>
+
         <div>
             <p class="heading1"> <span class="today">Lunch</span>
             <p class="heading1 card-body2"> <span class="today">Dinner</span>
         </div>
     </div>
-</div>
+</div> }}
