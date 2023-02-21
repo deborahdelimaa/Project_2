@@ -58,7 +58,7 @@ router.post("/edit-profile/:id", fileUploader.single("image"), async (req, res, 
         }, {new: true});
         /* const newUser = req.session.currentUser */
         req.session.currentUser = newUser
-        res.redirect(`/profile/${id}`);
+        res.redirect("/profile");
       }
     } catch (error) {
       console.log(error);
