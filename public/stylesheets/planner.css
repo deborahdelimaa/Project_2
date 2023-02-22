@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
 
 body {
-  background-color: rgb(255, 241, 189);
+  background-image: url("https://thumbs.dreamstime.com/b/greek-food-background-traditional-different-dishes-top-view-close-up-153149838.jpg");
   font-family: 'Rajdhani', sans-serif;
   max-width: 100vw;
   max-height: 100vh;
 }
 
 h1{
-    color: rgb(255, 241, 189);
+    color: rgb(163, 218, 141);
     text-shadow: -1px 0 rgb(20, 99, 86), 0 2px rgb(20, 99, 86), 2px 0 rgb(20, 99, 86), 0 -1px rgb(20, 99, 86);
     font-weight: 600;
     font-size: 4em;
-    margin-left: 6vw;
+   
     margin-bottom: -5vh;
     margin-top: 5vh;
+    text-align: center;
 }
 
 
@@ -22,6 +23,7 @@ td {
   color: rgb(163, 218, 141);
   background-color: rgb(20, 99, 86);
   text-align: center;
+  
   
 }
 
@@ -39,15 +41,15 @@ table {
     background-color:rgb(163, 218, 141);
     color:rgb(20, 99, 86);
     border-radius: 10px;
-    border-bottom: 4px solid rgb(255, 241, 189);
-    border-right:4px solid rgb(255, 241, 189); 
+    border-bottom: 4px dotted rgba(246, 239, 214, 0.662);
+    border-right:4px dotted rgba(246, 239, 214, 0.662);
 }
 
 .td2{
     
    color: rgb(255, 241, 189); 
-    border-bottom: 4px solid rgb(255, 241, 189);
-    border-right: 4px solid rgb(255, 241, 189);
+    border-bottom: 4px dotted rgba(246, 239, 214, 0.662);
+    border-right: 4px dotted rgba(246, 239, 214, 0.662);
     border-radius: 10px;
     max-width: 200px;
     max-height: auto;
