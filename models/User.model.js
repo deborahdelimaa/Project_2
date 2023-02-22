@@ -34,7 +34,7 @@ const userSchema = new Schema(
       type: Schema.Types.ObjectId, ref: "Calendar"
     },
     
-    Recipes:
+    recipes:
     [{ type: Schema.Types.ObjectId, ref: "Recipe"}]
     
   },
