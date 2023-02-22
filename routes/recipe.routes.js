@@ -18,7 +18,7 @@ router.get("/recipes", async (req, res, next) => {
 
 // create new recipes
 
-router.get("/create-recipe", isLoggedOut, (req, res) => res.render("private/create-recipe"));
+router.get("/create-recipe",  (req, res) => res.render("private/create-recipe"));
 
 router.post(
   "/create-recipe",
