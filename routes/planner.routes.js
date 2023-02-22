@@ -99,7 +99,8 @@ router.post("/planner/:id/delete", async (req, res, next) => {
         {
           $pull: { monday: id },
         }
-      );
+        );
+        
     } else if (day === "tuesday") {
       await Calendar.findOneAndUpdate(
         { user: userId },
