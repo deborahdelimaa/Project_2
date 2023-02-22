@@ -7,11 +7,16 @@ body {
   max-height: 100vh;
 }
 
+.nav-link{
+ color: rgb(255, 241, 189);
+margin-left: 2vw;
+}
+
 h1{
-    color: rgb(163, 218, 141);
+    color:  rgba(163, 218, 141, 0.884);
     text-shadow: -1px 0 rgb(20, 99, 86), 0 2px rgb(20, 99, 86), 2px 0 rgb(20, 99, 86), 0 -1px rgb(20, 99, 86);
     font-weight: 600;
-    font-size: 4em;
+    font-size: 5em;
    
     margin-bottom: -5vh;
     margin-top: 5vh;
