@@ -37,11 +37,13 @@ a{
 .flexdiv{
     display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
+	flex-wrap:wrap;
+	justify-content: space-between;
 	align-items: baseline;
 	align-content: flex-start;
    margin-top: 7vh;
+   padding: 20px;
+   margin-bottom: 10vh;
 }
 
 .card-body{
