@@ -1,15 +1,23 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
 body{
   background-image: url("https://thumbs.dreamstime.com/b/greek-food-background-traditional-different-dishes-top-view-close-up-153149838.jpg");
+  background-attachment: fixed;
+}
+.navbar{
+  font-family: 'Rajdhani', sans-serif;
 }
 
+.nav-link{
+  color: rgb(255, 241, 189);
+ margin-left: 2vw;
+ }
 .navbar-brand {
   margin-right: 80vw;
   color: rgb(163, 218, 141);
 }
 
-.nav-link {
-  color: rgb(163, 218, 141);
-}
+
 
 .singup {
   color: rgb(20, 99, 86);

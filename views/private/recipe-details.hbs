@@ -36,14 +36,17 @@
     </nav>
 
 {{!-- END OF NAV BAR --}}
-
-
+<div class="flex-recipes">
+<img class="img" src="{{recipes.image}}" alt="my recipe">
+</div>
+<div class="flex-data">
 {{#each recipes}}
-<img src="{{image}}" alt="">
 <h1>{{name}}</h1>
 <p>{{duration}}</p>
+<hr>
 <p>{{ingredients}}</p>
 <p>{{preparation}}</p>
 {{/each}}
+</div>
+<button class="button"><a href="/recipes">Back to recipes</a></button>
 
-<button><a href="/recipes">Recipes</a></button>

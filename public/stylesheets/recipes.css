@@ -3,10 +3,10 @@
 body{
     font-family: 'Rajdhani', sans-serif;
     background-image:url("../images/salad-juice-with-copy-space.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-width: auto;
-    max-height: auto;
+    background-size: 100vw, cover;
+    background-attachment: fixed;
+    
+   
 }
 
 h1{
