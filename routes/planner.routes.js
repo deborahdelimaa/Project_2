@@ -35,49 +35,49 @@ router.post("/planner/:id", async (req, res, next) => {
       await Calendar.findOneAndUpdate(
         { user: userId },
         {
-          $pull: { monday: id },
+          $push: { monday: id },
         }
       );
     } else if (day === "tuesday") {
       await Calendar.findOneAndUpdate(
         { user: userId },
         {
-          $pull: { tuesday: id },
+          $push: { tuesday: id },
         }
       );
     } else if (day === "wednesday") {
       await Calendar.findOneAndUpdate(
         { user: userId },
         {
-          $pull: { wednesday: id },
+          $push: { wednesday: id },
         }
       );
     } else if (day === "thursday") {
       await Calendar.findOneAndUpdate(
         { user: userId },
         {
-          $pull: { thursday: id },
+          $push: { thursday: id },
         }
       );
     } else if (day === "friday") {
       await Calendar.findOneAndUpdate(
         { user: userId },
         {
-          $pull: { friday: id },
+          $push: { friday: id },
         }
       );
     } else if (day === "saturday") {
       await Calendar.findOneAndUpdate(
         { user: userId },
         {
-          $pull: { saturday: id },
+          $push: { saturday: id },
         }
       );
     } else if (day === "sunday") {
       await Calendar.findOneAndUpdate(
         { user: userId },
         {
-          $pull: { sunday: id },
+          $push: { sunday: id },
         }
       );
     }
@@ -95,7 +95,7 @@ router.post("/planner/:id/delete", async (req, res, next) => {
 
     if (day === "monday") {
       await Calendar.findOneAndUpdate(
-        
+        { user: userId },
         {
           $pull: { monday: id },
         }
