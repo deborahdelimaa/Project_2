@@ -2,6 +2,7 @@
 
 body {
   background-image: url("https://thumbs.dreamstime.com/b/greek-food-background-traditional-different-dishes-top-view-close-up-153149838.jpg");
+ background-size: cover;
   font-family: 'Rajdhani', sans-serif;
   max-width: 100vw;
   max-height: 100vh;
