@@ -72,44 +72,54 @@
         method="post"
       >
         <input type="text" value="tuesday" name="day" hidden />
-        
+        {{#if calendar.tuesday.0._id}}
         <button type="submit">X</button>
-
+        {{/if}}
       </form></td>
 
     <td class="td2">{{calendar.wednesday.0.name}}<form
         action="/planner/{{calendar.wednesday.0._id}}/delete"
         method="post"
       ><input type="text" value="wednesday" name="day" hidden />
+      {{#if calendar.wednesday.0._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
 
     <td class="td2">{{calendar.thursday.0.name}}<form
         action="/planner/{{calendar.thursday.0._id}}/delete"
         method="post"
       ><input type="text" value="thursday" name="day" hidden />
+      {{#if calendar.thursday.0._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
 
     <td class="td2">{{calendar.friday.0.name}}<form
         action="/planner/{{calendar.friday.0._id}}/delete"
         method="post"
       ><input type="text" value="friday" name="day" hidden />
+      {{#if calendar.friday.0._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
 
     <td class="td2">{{calendar.saturday.0.name}}<form
         action="/planner/{{calendar.saturday.0._id}}/delete"
         method="post"
       ><input type="text" value="saturday" name="day" hidden />
+      {{#if calendar.saturday.0._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
 
     <td class="td2">{{calendar.sunday.0.name}}<form
         action="/planner/{{calendar.sunday.0._id}}/delete"
         method="post"
       ><input type="text" value="sunday" name="day" hidden />
+      {{#if calendar.sunday.0._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
   </tr>
   <tr>
@@ -118,43 +128,57 @@
         action="/planner/{{calendar.monday.1._id}}/delete"
         method="post"
       ><input type="text" value="monday" name="day" hidden />
+            {{#if calendar.monday.1._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.tuesday.1.name}}<form
         action="/planner/{{calendar.tuesday.1._id}}"
         method="post"
       ><input type="text" value="tuesday" name="day" hidden />
+       {{#if calendar.tuesday.1._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.wednesday.1.name}}<form
         action="/planner/{{calendar.wednesday.1._id}}"
         method="post"
       ><input type="text" value="wednesday" name="day" hidden />
+      {{#if calendar.wednesday.1._id}}
         <button type="submit">X</button>
+         {{/if}}
       </form></td>
     <td class="td2">{{calendar.thursday.1.name}}<form
         action="/planner/{{calendar.thursday.1._id}}/delete"
         method="post"
       ><input type="text" value="thursday" name="day" hidden />
+      {{#if calendar.thursday.1._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.friday.1.name}}<form
         action="/planner/{{calendar.friday.1._id}}/delete"
         method="post"
       ><input type="text" value="friday" name="day" hidden />
+      {{#if calendar.friday.1._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.saturday.1.name}}<form
         action="/planner/{{calendar.saturday.1._id}}/delete"
         method="post"
       ><input type="text" value="saturday" name="day" hidden />
+      {{#if calendar.saturday.1._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.sunday.1.name}}<form
         action="/planner/{{calendar.sunday.1._id}}/delete"
         method="post"
       ><input type="text" value="sunday" name="day" hidden />
+      {{#if calendar.sunday.1._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
   </tr>
   <tr>
@@ -163,44 +187,57 @@
         action="/planner/{{calendar.monday.2._id}}/delete"
         method="post"
       ><input type="text" value="monday" name="day" hidden />
+      {{#if calendar.monday.2._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.tuesday.2.name}}<form
         action="/planner/{{calendar.tuesday.2._id}}/delete"
         method="post"
       ><input type="text" value="tuesday" name="day" hidden />
+      {{#if calendar.tuesday.2._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.wednesday.2.name}}<form
         action="/planner/{{calendar.wednesday.2._id}}/delete"
         method="post"
       ><input type="text" value="wednesday" name="day" hidden />
+      {{#if calendar.wednesday.2._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.thursday.2.name}}<form
         action="/planner/{{calendar.thursday.2._id}}/delete"
         method="post"
       ><input type="text" value="thursday" name="day" hidden />
+      {{#if calendar.thursday.2._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.friday.2.name}}<form
         action="/planner/{{calendar.friday.2._id}}/delete"
         method="post"
       ><input type="text" value="fridday" name="day" hidden />
+      {{#if calendar.friday.2._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.saturday.2.name}}<form
         action="/planner/{{calendar.saturday.2._id}}/delete"
         method="post"
       ><input type="text" value="saturday" name="day" hidden />
+      {{#if calendar.saturday.2._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
     <td class="td2">{{calendar.sunday.2.name}}<form
         action="/planner/{{calendar.sunday.2._id}}/delete"
         method="post"
       ><input type="text" value="sunday" name="day" hidden />
+      {{#if calendar.sunday.2._id}}
         <button type="submit">X</button>
+        {{/if}}
       </form></td>
   </tr>
-
 </table>

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  background-image: url("../images/salad-juice-with-copy-space.jpg");
+  background-size: 120vw, cover;
+  background-attachment: fixed;
+}
+
+.intro {
+  text-align: center;
+  margin-top: 25vh;
+  color: rgb(20, 99, 86);
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 800;
+}
+
+.button {
+  --color: rgb(20, 99, 86);
+  padding: 0.8em 1.7em;
+  background-color: rgba(20, 99, 86, 0.727);
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+  width: 9vw;
+  margin-right: 3vw;
+  
+}
+
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+.button::before {
+  top: -1em;
+  left: -1em;
+}
+
+.button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.button:hover::before,
+.button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.button:hover {
+  color: rgb(10, 25, 30);
+  text-decoration: none;
+}
+
+.button:active {
+  filter: brightness(0.8);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 241, 189);
+}
+
+.clicks {
+  display: flex;
+  justify-content: center;
+  align-content:space-around;
+  margin-top: 7vh;
+  margin-left: 3vw;
+
+}
