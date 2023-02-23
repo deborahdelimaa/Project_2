@@ -13,6 +13,11 @@ const express = require("express");
 // https://www.npmjs.com/package/hbs
 const hbs = require("hbs");
 
+
+hbs.registerHelper("ifIncludes", function (arg1, arg2, options) {
+    return arg1.includes(arg2) ? options.fn(this) : options.inverse(this);
+  });
+
 const app = express();
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
@@ -29,6 +34,15 @@ app.use("/", indexRoutes);
 
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
+
+const recipeRoutes = require("./routes/recipe.routes");
+app.use("/", recipeRoutes);
+
+const userRoutes = require("./routes/user.routes");
+app.use("/", userRoutes);
+
+const plannerRoutes = require("./routes/planner.routes");
+app.use("/", plannerRoutes);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

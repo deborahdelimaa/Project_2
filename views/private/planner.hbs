@@ -1,0 +1,206 @@
+<link rel="stylesheet" href="/stylesheets/planner.css" />
+
+{{! nav bar HERE  }}
+
+<nav class="navbar navbar-expand-lg" style="background-color:rgb(20, 99, 86)">
+  <div class="container-fluid">
+    <a
+      class="navbar-brand"
+      style="color:rgb(255, 241, 189); margin-right: 70vw;"
+      href="/auth/signup"
+    >ReMeals</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/recipes">Recipes
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/auth/logout">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{{! TABLE PLANNER HERE }}
+
+<h1>My Planner</h1>
+<table>
+  <thead>
+    <tr>
+      <td style="background-color:rgb(255, 241, 189);"></td>
+      <td class="td1"> Monday</td>
+      <td class="td1">Tuesday</td>
+      <td class="td1">Wednesday</td>
+      <td class="td1">Thursday</td>
+      <td class="td1">Friday</td>
+      <td class="td1">Saturday</td>
+      <td class="td1">Sunday</td>
+    </tr>
+  </thead>
+  <tr>
+
+    <td style="background-color:rgb(255, 241, 189);"></td>
+    <td class="td2">{{calendar.monday.0.name}}
+      <form action="/planner/{{calendar.monday.0._id}}/delete" method="post">
+        <input type="text" value="monday" name="day" hidden />
+
+        {{#if calendar.monday.0._id}}
+          <button type="submit">X</button>
+        {{/if}}
+
+      </form></td>
+
+    <td class="td2">{{calendar.tuesday.0.name}}<form
+        action="/planner/{{calendar.tuesday.0._id}}/delete"
+        method="post"
+      >
+        <input type="text" value="tuesday" name="day" hidden />
+        
+        <button type="submit">X</button>
+
+      </form></td>
+
+    <td class="td2">{{calendar.wednesday.0.name}}<form
+        action="/planner/{{calendar.wednesday.0._id}}/delete"
+        method="post"
+      ><input type="text" value="wednesday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+
+    <td class="td2">{{calendar.thursday.0.name}}<form
+        action="/planner/{{calendar.thursday.0._id}}/delete"
+        method="post"
+      ><input type="text" value="thursday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+
+    <td class="td2">{{calendar.friday.0.name}}<form
+        action="/planner/{{calendar.friday.0._id}}/delete"
+        method="post"
+      ><input type="text" value="friday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+
+    <td class="td2">{{calendar.saturday.0.name}}<form
+        action="/planner/{{calendar.saturday.0._id}}/delete"
+        method="post"
+      ><input type="text" value="saturday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+
+    <td class="td2">{{calendar.sunday.0.name}}<form
+        action="/planner/{{calendar.sunday.0._id}}/delete"
+        method="post"
+      ><input type="text" value="sunday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+  </tr>
+  <tr>
+    <td style="background-color:rgb(255, 241, 189);"></td>
+    <td class="td2">{{calendar.monday.1.name}}<form
+        action="/planner/{{calendar.monday.1._id}}/delete"
+        method="post"
+      ><input type="text" value="monday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.tuesday.1.name}}<form
+        action="/planner/{{calendar.tuesday.1._id}}"
+        method="post"
+      ><input type="text" value="tuesday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.wednesday.1.name}}<form
+        action="/planner/{{calendar.wednesday.1._id}}"
+        method="post"
+      ><input type="text" value="wednesday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.thursday.1.name}}<form
+        action="/planner/{{calendar.thursday.1._id}}/delete"
+        method="post"
+      ><input type="text" value="thursday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.friday.1.name}}<form
+        action="/planner/{{calendar.friday.1._id}}/delete"
+        method="post"
+      ><input type="text" value="friday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.saturday.1.name}}<form
+        action="/planner/{{calendar.saturday.1._id}}/delete"
+        method="post"
+      ><input type="text" value="saturday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.sunday.1.name}}<form
+        action="/planner/{{calendar.sunday.1._id}}/delete"
+        method="post"
+      ><input type="text" value="sunday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+  </tr>
+  <tr>
+    <td style="background-color:rgb(255, 241, 189);"></td>
+    <td class="td2">{{calendar.monday.2.name}}<form
+        action="/planner/{{calendar.monday.2._id}}/delete"
+        method="post"
+      ><input type="text" value="monday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.tuesday.2.name}}<form
+        action="/planner/{{calendar.tuesday.2._id}}/delete"
+        method="post"
+      ><input type="text" value="tuesday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.wednesday.2.name}}<form
+        action="/planner/{{calendar.wednesday.2._id}}/delete"
+        method="post"
+      ><input type="text" value="wednesday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.thursday.2.name}}<form
+        action="/planner/{{calendar.thursday.2._id}}/delete"
+        method="post"
+      ><input type="text" value="thursday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.friday.2.name}}<form
+        action="/planner/{{calendar.friday.2._id}}/delete"
+        method="post"
+      ><input type="text" value="fridday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.saturday.2.name}}<form
+        action="/planner/{{calendar.saturday.2._id}}/delete"
+        method="post"
+      ><input type="text" value="saturday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+    <td class="td2">{{calendar.sunday.2.name}}<form
+        action="/planner/{{calendar.sunday.2._id}}/delete"
+        method="post"
+      ><input type="text" value="sunday" name="day" hidden />
+        <button type="submit">X</button>
+      </form></td>
+  </tr>
+
+</table>

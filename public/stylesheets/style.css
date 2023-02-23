@@ -1,12 +1,157 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+body{
+  background-image: url("https://thumbs.dreamstime.com/b/greek-food-background-traditional-different-dishes-top-view-close-up-153149838.jpg");
+  background-attachment: fixed;
+}
+.navbar{
+  font-family: 'Rajdhani', sans-serif;
 }
 
-a {
-  color: #00b7ff;
+.nav-link{
+  color: rgb(255, 241, 189);
+ margin-left: 2vw;
+ }
+.navbar-brand {
+  margin-right: 80vw;
+  color: rgb(163, 218, 141);
 }
 
-h1 {
-  color: 15px;
+
+
+.singup {
+  color: rgb(20, 99, 86);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 1.5em;
 }
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 350px;
+  width: 300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 35px;
+  border-radius: 15px;
+  background: #e3e3e3;
+  -webkit-box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
+  box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
+  border-radius: 8px;
+}
+
+.inputBox,
+.inputBox1 {
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input,
+.inputBox1 input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #000;
+  font-size: 1em;
+  background: transparent;
+  border-left: 2px solid rgb(20, 99, 86);
+  border-bottom: 2px solid rgb(20, 99, 86);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span,
+.inputBox1 span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  -webkit-transform: translateX(113px) translateY(-15px);
+  -ms-transform: translateX(113px) translateY(-15px);
+  transform: translateX(113px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: rgb(20, 99, 86);
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox1 input:valid ~ span,
+.inputBox1 input:focus ~ span {
+  -webkit-transform: translateX(156px) translateY(-15px);
+  -ms-transform: translateX(156px) translateY(-15px);
+  transform: translateX(156px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: rgb(20, 99, 86);
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+.inputBox input:valid,
+.inputBox input:focus,
+.inputBox1 input:valid,
+.inputBox1 input:focus {
+  border: 2px solid rgb(20, 99, 86);
+  border-radius: 8px;
+}
+
+.enter {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid rgb(20, 99, 86);
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 3em;
+}
+
+.enter:hover {
+  background-color: rgb(20, 99, 86);
+  color: white;
+}
+
+.center {
+ position: absolute;
+ margin-left: 40%;
+ margin-top: 10%;
+}
+

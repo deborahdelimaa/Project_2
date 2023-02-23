@@ -1,0 +1,8 @@
+body{
+    background-color: antiquewhite;
+}
+
+.profile-photo{
+    max-width: 30vw;
+    max-height: auto;
+}

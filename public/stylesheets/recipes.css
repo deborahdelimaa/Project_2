@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+    background-image:url("../images/salad-juice-with-copy-space.jpg");
+    background-size: 100vw, cover;
+    background-attachment: fixed;
+    
+   
+}
+
+h1{
+    color:  rgba(163, 218, 141, 0.884);
+    text-shadow: -1px 0 rgb(20, 99, 86), 0 2px rgb(20, 99, 86), 2px 0 rgb(20, 99, 86), 0 -1px rgb(20, 99, 86);
+    font-weight: 600;
+    font-size: 4em;
+    margin-bottom: -5vh;
+    margin-left:5vw ;
+}
+
+
+a{
+    text-decoration: none;
+    color:rgb(255, 241, 189);
+
+}
+.first-container{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+.nav-link{
+    color: rgb(255, 241, 189);
+   margin-left: 2vw;
+   }
+
+.flexdiv{
+    display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content: space-between;
+	 align-items: baseline; 
+	align-content: flex-start;
+    padding: 30px;
+}
+.card {
+    margin-bottom:10vh;
+}
+.card-body{
+
+    background-color:rgb(20, 99, 86);
+    color: rgb(163, 218, 141);
+}
+
+.card-title {
+    color:rgb(255, 241, 189);
+}
+
+.card-text {
+    color:rgb(255, 241, 189);
+}
+
+
+.card-link{
+    color:rgb(163, 218, 141);
+    text-decoration:none;
+}
+
+.card-link:hover{
+    color:rgb(255, 241, 189);
+}
+
+.button {
+    --color: rgb(20, 99, 86);
+    padding: 0.8em 1.7em;
+    background-color:rgba(20, 99, 86, 0.398);
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    margin-right:5vw;
+    margin-top: 1.5vh;
+
+   }
+   
+   .button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .button::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .button:hover::before, .button:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   .button:hover {
+    color: rgb(10, 25, 30);
+    text-decoration: none;
+   }
+   
+   .button:active {
+    filter: brightness(.8);
+   }
+   
+   /*button2*/
+
+   .button-2 {
+    
+    border: 0;
+    border-radius: 100px;
+    background-color:rgb(163, 218, 141);
+    color: rgb(20, 99, 86);
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    width: 8vw;
+    height: 6vh;
+    font-size: 14px;
+  }
+  
+  .button-2:hover {
+    background-color:rgb(199, 242, 164);
+    box-shadow: 0 0 20px #6fc5ff50;
+  }
+  
+  .button-2:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+  }
+
+  select{
+    margin-right: 2VW;
+    background-color:rgb(20, 99, 86);
+    border: 0 solid;
+    color:rgb(163, 218, 141);
+  }
+
+  select:hover{
+  color: rgb(255, 241, 189);
+  }

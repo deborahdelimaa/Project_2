@@ -1,0 +1,15 @@
+<h1>Edit profile</h1>
+
+<form action="/edit-profile/{{user._id}}" method="post" enctype="multipart/form-data">
+  <label for="username">Username:</label>
+  <input type="text" name="username" id="username" value="{{user.username}}"/>
+
+  <label for="bio">Bio:</label>
+  <textarea class='form-control' name='bio' id='bio' cols='10' rows='5'>{{user.bio}}</textarea>
+
+  <label for="image">Select an image for your profile!</label>
+  <input type="file" name="image" id="image" />
+
+  <button type="submit">Update profile</button>
+
+</form>
