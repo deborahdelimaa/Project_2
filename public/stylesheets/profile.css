@@ -154,3 +154,7 @@ body {
     margin-top: 7vh;
     margin-left: 2vw;
   }
+  .nav-link{
+    color: rgb(255, 241, 189);
+   margin-left: 2vw;
+   }
