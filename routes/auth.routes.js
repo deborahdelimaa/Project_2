@@ -21,7 +21,7 @@ router.get("/signup", isLoggedOut, (req, res) => {
 });
 
 // POST /auth/signup
-router.post("/signup", (req, res) => {
+router.post("/signup", isLoggedOut, (req, res) => {
   const { username, email, password } = req.body;
 
   // Check that username, email, and password are provided
@@ -86,7 +86,7 @@ router.get("/login", isLoggedOut, (req, res) => {
 });
 
 // POST /auth/login
-router.post("/login",  (req, res, next) => {
+router.post("/login", isLoggedOut, (req, res, next) => {
   const { email, password } = req.body;
 
   // Check that username, email, and password are provided
@@ -143,12 +143,8 @@ router.post("/login",  (req, res, next) => {
 
 router.get("/planner", (req, res) => res.render("private/planner"));
 
-
-
-
-
 // GET /auth/logout
-router.get("/logout",(req, res) => {
+router.get("/logout", isLoggedIn, (req, res) => {
   req.session.destroy((err) => {
     if (err) {
       res.status(500).render("auth/logout", { errorMessage: err.message });
