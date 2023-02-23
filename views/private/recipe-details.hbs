@@ -46,14 +46,14 @@
   {{#each recipes}}
     <h1>{{name}}</h1>
     <p>{{duration}}</p>
-    <hr />
+    <hr>
     <p>{{ingredients}}</p>
     <p>{{preparation}}</p>
   {{/each}}
 </div>
 <button class="button"><a href="/recipes">Back to recipes</a></button>
 
-<hr />
+<hr>
 
 {{#ifIncludes user.recipes recipes._id}}
   <form action="/recipe-details/{{recipes._id}}/delete" method="post">
