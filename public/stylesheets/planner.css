@@ -33,6 +33,7 @@ td {
 }
 
 table {
+  table-layout: fixed;
   width: 95vw;
   height: 60vh;
   margin-left: 2.5vw;
@@ -48,6 +49,7 @@ table {
     border-radius: 10px;
     border-bottom: 4px dotted rgba(246, 239, 214, 0.662);
     border-right:4px dotted rgba(246, 239, 214, 0.662);
+    border-left: 4px dotted rgba(246, 239, 214, 0.662);
 }
 
 .td2{
@@ -55,6 +57,7 @@ table {
    color: rgb(255, 241, 189); 
     border-bottom: 4px dotted rgba(246, 239, 214, 0.662);
     border-right: 4px dotted rgba(246, 239, 214, 0.662);
+    border-left:4px dotted rgba(246, 239, 214, 0.662) ;
     border-radius: 10px;
     max-width: 200px;
     max-height: auto;
