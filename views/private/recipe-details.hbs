@@ -54,6 +54,9 @@
 <button class="button"><a href="/recipes">Back to recipes</a></button>
 
 <hr class="flex-recipes">
+
+
+
 {{#ifIncludes user.recipes recipes._id}}
   <form action="/recipe-details/{{recipes._id}}/delete" method="post">
     <button class="button2" type="submit">Delete recipe</button>
