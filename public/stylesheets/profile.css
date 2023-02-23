@@ -90,16 +90,15 @@ body {
     margin-bottom: 20px;
     color: #666;
   }
-
   .button {
     --color: rgb(20, 99, 86);
     padding: 0.8em 1.7em;
-    background-color: rgba(20, 99, 86, 0.727);
-    border-radius: 0.3em;
+    background-color:rgba(20, 99, 86, 0.398);
+    border-radius: .3em;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: 0.5s;
+    transition: .5s;
     font-weight: 400;
     font-size: 17px;
     border: 1px solid;
@@ -107,12 +106,13 @@ body {
     text-transform: uppercase;
     color: var(--color);
     z-index: 1;
-    width: 9vw;
-    margin-right: 3vw;
-  }
-  .button::before,
-  .button::after {
-    content: “”;
+    margin-right:0vw;
+    margin-top: 1.5vh;
+
+   }
+   
+   .button::before, .button::after {
+    content: '';
     display: block;
     width: 50px;
     height: 50px;
@@ -122,27 +122,32 @@ body {
     z-index: -1;
     background-color: var(--color);
     transition: 1s ease;
-  }
-  .button::before {
+   }
+   
+   .button::before {
     top: -1em;
     left: -1em;
-  }
-  .button::after {
+   }
+   
+   .button::after {
     left: calc(100% + 1em);
     top: calc(100% + 1em);
-  }
-  .button:hover::before,
-  .button:hover::after {
+   }
+   
+   .button:hover::before, .button:hover::after {
     height: 410px;
     width: 410px;
-  }
-  .button:hover {
+   }
+   
+   .button:hover {
     color: rgb(10, 25, 30);
     text-decoration: none;
-  }
-  .button:active {
-    filter: brightness(0.8);
-  }
+   }
+   
+   .button:active {
+    filter: brightness(.8);
+   }
+  
   a {
     text-decoration: none;
     color: rgb(255, 241, 189);
