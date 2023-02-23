@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
 body{
-    background-color: antiquewhite;
+    
+      font-family: 'Rajdhani', sans-serif;
+        background-image: url("https://thumbs.dreamstime.com/b/greek-food-background-traditional-different-dishes-top-view-close-up-153149838.jpg");
+        background-attachment: fixed;
+      
 }
 
 .profile-photo{
@@ -12,22 +17,20 @@ body{
     color: rgb(0, 0, 0);
 }
 
-body {
-    background-color: #f0f0f0;
-    
-  }
+
   .container {
     width: 400px;
     margin: 120px auto 120px;
-    background-color: #fff;
+    background: #e3e3e3;
     padding: 0 20px 20px;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.075);
-    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
-    -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+    -webkit-box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
+    box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
     text-align: center;
+    
   }
   .container:hover .avatar-flip {
     transform: rotateY(180deg);
@@ -108,7 +111,7 @@ body {
     z-index: 1;
     margin-right:0vw;
     margin-top: 1.5vh;
-
+    margin-bottom: 40px;
    }
    
    .button::before, .button::after {
@@ -163,3 +166,9 @@ body {
     color: rgb(255, 241, 189);
    margin-left: 2vw;
    }
+.username{
+    margin-bottom: 30px;
+    color: rgb(2, 122, 82);
+    font-size: 40px;
+    font-weight: 1000;
+}
