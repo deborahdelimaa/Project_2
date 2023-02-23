@@ -7,7 +7,7 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 const User = require("../models/User.model");
 // Display all the recipes
 
-router.get("/recipes", async (req, res, next) => {
+router.get("/recipes", isLoggedIn, async (req, res, next) => {
   try {
     const recipes = await Recipe.find();
     res.render("private/recipes", { recipes });
@@ -19,13 +19,14 @@ router.get("/recipes", async (req, res, next) => {
 
 // create new recipes
 
-router.get("/create-recipe",  (req, res) => res.render("private/create-recipe"));
+router.get("/create-recipe", isLoggedIn, (req, res) =>
+  res.render("private/create-recipe")
+);
 
 router.post(
   "/create-recipe",
   fileUploader.single("image"),
   async (req, res, next) => {
-    
     try {
       const { name, duration, ingredients, preparation } = req.body;
       const userId = req.session.currentUser._id;
@@ -37,13 +38,14 @@ router.post(
           ingredients,
           preparation,
           image: req.file.path,
-        },);
+        });
 
         await User.findByIdAndUpdate(
           userId,
-          {$push: {recipes: myRecipe._id}}, {new: true}
-          )
-        
+          { $push: { recipes: myRecipe._id } },
+          { new: true }
+        );
+
         res.redirect("/recipes");
       } else {
         const myRecipe = await Recipe.create({
@@ -51,12 +53,13 @@ router.post(
           duration,
           ingredients,
           preparation,
-        },);
+        });
         await User.findByIdAndUpdate(
           userId,
-          {$push: {recipes: myRecipe._id}}, {new: true}
-          )
-        
+          { $push: { recipes: myRecipe._id } },
+          { new: true }
+        );
+
         res.redirect("/recipes");
       }
     } catch (error) {
@@ -65,31 +68,32 @@ router.post(
     }
   }
 );
-router.post('/recipe-details/:id/delete', async (req, res, next) => {
-  const {id} = req.params
-  try {
-    const recipes = await Recipe.findByIdAndRemove(id); 
-    res.redirect("/recipes");
-  } catch (error) {
-    next(error);
-  }
-})
-
-
-router.get('/recipe-details/:id', async (req, res) => {
+router.post(
+  "/recipe-details/:id/delete",
+  isLoggedIn,
+  async (req, res, next) => {
+    const { id } = req.params;
     try {
-      const currentUser = req.session.currentUser._id;
-
-    const user = await User.findById(currentUser)
-      const recipes = await Recipe.findById(req.params.id);
-      res.render('private/recipe-details', {recipes, user});
+      const recipes = await Recipe.findByIdAndRemove(id);
+      res.redirect("/recipes");
     } catch (error) {
       next(error);
     }
-  });
+  }
+);
+
+router.get("/recipe-details/:id", isLoggedIn, async (req, res, next) => {
+  try {
+    const currentUser = req.session.currentUser._id;
+
+    const user = await User.findById(currentUser);
+    const recipes = await Recipe.findById(req.params.id);
 
 
-
-
+    res.render("private/recipe-details", { recipes, user });
+  } catch (error) {
+    next(error);
+  }
+});
 
 module.exports = router;

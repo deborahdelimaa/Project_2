@@ -4,8 +4,10 @@ const Calendar = require("../models/Calendar.model");
 const User = require("../models/User.model");
 const router = express.Router();
 const fileUploader = require("../config/cloudinary.config");
+const isLoggedOut = require("../middleware/isLoggedOut");
+const isLoggedIn = require("../middleware/isLoggedIn");
 
-router.get("/planner", async (req, res) => {
+router.get("/planner", isLoggedIn, async (req, res) => {
   const userId = req.session.currentUser._id;
   const thisUser = await User.findById(userId);
 
@@ -25,7 +27,7 @@ router.get("/planner", async (req, res) => {
   res.render("private/planner", { calendar });
 });
 
-router.post("/planner/:id", async (req, res, next) => {
+router.post("/planner/:id", isLoggedIn, async (req, res, next) => {
   try {
     const { day } = req.body;
     const { id } = req.params;
@@ -87,7 +89,8 @@ router.post("/planner/:id", async (req, res, next) => {
     next(error);
   }
 });
-router.post("/planner/:id/delete", async (req, res, next) => {
+
+router.post("/planner/:id/delete", isLoggedIn, async (req, res, next) => {
   try {
     const { day } = req.body;
     const { id } = req.params;
@@ -99,8 +102,7 @@ router.post("/planner/:id/delete", async (req, res, next) => {
         {
           $pull: { monday: id },
         }
-        );
-        
+      );
     } else if (day === "tuesday") {
       await Calendar.findOneAndUpdate(
         { user: userId },
@@ -148,18 +150,7 @@ router.post("/planner/:id/delete", async (req, res, next) => {
   } catch (error) {
     console.log(error);
     next(error);
-    
   }
 });
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router;
