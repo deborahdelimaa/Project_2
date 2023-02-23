@@ -1,15 +1,50 @@
 <link rel="stylesheet" href="/stylesheets/profile.css">
 
- <div class="card">
-    <img class="card-img-top" src={{user.image}} alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{user.username}}</h5>
-      <p class="card-text">{{user.bio}}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
+<nav class="navbar navbar-expand-lg" style="background-color:rgb(20, 99, 86)">
+  <div class="container-fluid">
+    <a
+      class="navbar-brand"
+      style="color:rgb(255, 241, 189); margin-right: 70vw;"
+      href="/auth/signup"
+    >ReMeals</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/recipes">Recipes
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/auth/logout">Logout</a>
+        </li>
+      </ul>
     </div>
   </div>
+</nav>
+
+<div class="container">
+  <div class="avatar-flip">
+    <img src="{{user.image}}" height="150" width="150">
+    <img src="{{user.image}}" height="150" width="150">
+  </div>
+  <h2>{{user.username}}</h2>
+  <p>{{user.bio}}</p>
+  <button class="button" type="submit"> <a href="/edit-profile/{{user._id}}">Edit profile</a></button>
+</div>
 {{!-- <img class="profile-photo" src={{user.image}} alt="Ratatouille">
 <h3>Name: {{user.username}}</h3>
 <h3>Email: {{user.email}}</h3>
@@ -17,4 +52,3 @@
 {{!-- <h3>Favorites <br>
 {{user.username.favoriteRecipes}}</h3> --}}
 
-<a href="/edit-profile/{{user._id}}">Edit profile</a> --
