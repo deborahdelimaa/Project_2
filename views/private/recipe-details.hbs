@@ -53,11 +53,10 @@
 </div>
 <button class="button"><a href="/recipes">Back to recipes</a></button>
 
-<hr>
-
+<hr class="flex-recipes">
 {{#ifIncludes user.recipes recipes._id}}
   <form action="/recipe-details/{{recipes._id}}/delete" method="post">
-    <button type="submit">X</button>
+    <button class="button2" type="submit">Delete recipe</button>
   </form>
 {{/ifIncludes}}
 
