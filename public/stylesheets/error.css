@@ -1,0 +1,77 @@
+body{
+    background-image:url("https://media.tenor.com/WYQDeEGyR2kAAAAC/hungry-patrick-star.gif") ;
+    background-size:100vw 100vh;
+  background-attachment: fixed;
+}
+
+
+.button {
+  --color: rgb(20, 99, 86);
+  padding: 0.8em 1.7em;
+  background-color:rgba(20, 99, 86, 0.727);
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+  margin-left:2vw;
+  margin-top: 1.5vh;
+
+ }
+ 
+ .button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color: rgb(10, 25, 30);
+  text-decoration: none;
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+
+
+ div{
+
+background-color: rgba(255, 255, 255, 0.299);
+width: fit-content;
+height: fit-content;
+border-radius: 10px;
+text-align: center;
+margin-top: 27vh;
+margin-left: 18vw;
+
+ }
